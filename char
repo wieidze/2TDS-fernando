@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char letra;
+
+    printf("digite uma letra: ");
+    scanf(" %c", &letra);
+   
+    if (letra) {
+       
+        if (isupper(letra)) {
+            printf("a letra digitada ja e maiuscula.\n");
+        } else {
+            printf("a letra digitada e minuscula.\n");
+        }    
+       
+        printf("minuscula: %c\n", tolower(letra));
+        printf("maiuscula: %c\n", toupper(letra));
+    } else {
+        printf("o caractere digitado nao e uma letra.\n");
+    }    
+   
+    return 0;
+}
