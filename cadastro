@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <string.h>
+
+char nome[50];
+char cpf[15];
+char rua[20];
+char telefone[20];
+int op;
+
+void cadastrarpessoa(){
+    printf("Pessoa:");
+    fgets(nome,50,stdin);
+    printf("cpf:");
+    fgets(cpf,15,stdin);
+    printf("rua:");
+    fgets(rua,20,stdin);
+    printf("telefone:");
+    fgets(telefone,20,stdin);
+}  
+void verpessoa(){
+    printf("pessoa:%s", nome);
+    printf("cpf:%s", cpf);
+    printf("rua:%s", rua);
+    printf("telefone:%s", telefone);
+}  
+
+    int main(){
+   while(1){
+    printf("escolha uma opção: \n1-cadastrar pessoa \n2-ver pessoa");
+    scanf("%d", &op);
+    getchar();
+   
+    if (op==1){
+        cadastrarpessoa();
+    }
+ 
+    else{
+        verpessoa();
+    }
+   
+}  
+    return 0;
+}
